@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "normal": { "model": "lighting:tikitorch" },
+    "facing=south":{"model":"lighting:tikitorch"},
+    "facing=west":{"model":"lighting:tikitorch","y":90},
+    "facing=north":{"model":"lighting:tikitorch","y":180},
+    "facing=east":{"model":"lighting:tikitorch","y":270}
+  }
+}
