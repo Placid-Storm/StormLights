@@ -18,7 +18,7 @@ public class ModelTikiTorch extends ModelBase {
         textureWidth = 64;
         textureHeight = 32;
 
-        this.Reed[1] = new ModelRenderer(this, 0, 0);
+        Reed[1] = new ModelRenderer(this, 0, 0);
         Reed[1].addBox(-1F, -4F, -1F, 2, 30, 2);
         Reed[1].setRotationPoint(0F, 0F, 1F);
         Reed[1].setTextureSize(64, 32);
