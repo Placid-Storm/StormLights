@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "normal": { "model": "lighting:candelabra" },
+    "facing=south":{"model":"lighting:candelabra"},
+    "facing=west":{"model":"lighting:candelabra","y":90},
+    "facing=north":{"model":"lighting:candelabra","y":180},
+    "facing=east":{"model":"lighting:candelabra","y":270}
+  }
+}

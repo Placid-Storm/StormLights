@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "entity/fencetopper/fencetopper",
-		"particle": "entity/fencetopper/fencetopper"
+		"0": "lighting:entity/fencetopper/fencetopper",
+		"particle": "lighting:entity/fencetopper/fencetopper"
 	},
 	"elements": [
 		{

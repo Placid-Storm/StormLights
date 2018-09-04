@@ -1,6 +1,7 @@
 package com.placid_storm.lighting.blocks;
 
 
+import com.placid_storm.lighting.init.ModBlocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.IBlockState;
@@ -21,6 +22,18 @@ public class BlockFenceTopperTop extends BlockBase {
     }
 
     protected static final AxisAlignedBB FENCE_TOPPER_AABB = new AxisAlignedBB(0.375, 0.0, 0.375, 0.625, 1.0, 0.625);
+
+    @Override
+    public void onBlockHarvested(World worldIn, BlockPos pos, IBlockState state, EntityPlayer player) {
+        int x = pos.getX();
+        int y = pos.getY();
+        int z = pos.getZ();
+        BlockPos lowPos = new BlockPos(x, y-1, z);
+
+        if (worldIn.getBlockState(lowPos) == ModBlocks.FENCETOPPER.getDefaultState()){
+            worldIn.setBlockToAir(lowPos);
+        }
+    }
 
     @Override
     public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess world, BlockPos pos) {
@@ -48,7 +61,7 @@ public class BlockFenceTopperTop extends BlockBase {
         int x = pos.getX();
         int y = pos.getY();
         int z = pos.getZ();
-
+        BlockPos torchPos = new BlockPos(x, y+1, z);
 
         if (itemstack.isEmpty()) {
             return true;
@@ -56,9 +69,9 @@ public class BlockFenceTopperTop extends BlockBase {
         else{
             Item block = itemstack.getItem();
 
-            if (block == Item.getItemFromBlock(Blocks.TORCH) && canPlaceTorchOnTop(state, worldIn, pos)){
+            if (block == Item.getItemFromBlock(Blocks.TORCH) && worldIn.getBlockState(torchPos) == Blocks.AIR.getDefaultState()){
                 itemstack.shrink(1);
-                worldIn.setBlockState(new BlockPos(x, y + 1, z),Blocks.TORCH.getDefaultState(), 3);
+                worldIn.setBlockState(torchPos,Blocks.TORCH.getDefaultState(), 3);
 
             }
         }

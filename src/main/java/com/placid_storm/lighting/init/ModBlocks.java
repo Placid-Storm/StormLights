@@ -1,5 +1,6 @@
 package com.placid_storm.lighting.init;
 
+import com.placid_storm.lighting.blocks.BlockCandelabra;
 import com.placid_storm.lighting.blocks.BlockFenceTopper;
 import com.placid_storm.lighting.blocks.BlockFenceTopperTop;
 import com.placid_storm.lighting.blocks.BlockTikiTorch;
@@ -15,6 +16,7 @@ public class ModBlocks {
     public static final Block TIKITORCH = new BlockTikiTorch("tikitorch", Material.WOOD);
     public static final Block FENCETOPPER = new BlockFenceTopper("fencetopper", Material.IRON);
     public static final Block FENCETOPPERTOP = new BlockFenceTopperTop("fencetoppertop", Material.IRON);
+    public static final Block CANDELABRA = new BlockCandelabra("candelabra", Material.IRON);
 
     //public static final Block RUBY_ORE = new RubyOre("ruby_ore", Material.ROCK);
 }

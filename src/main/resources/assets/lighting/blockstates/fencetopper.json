@@ -1,5 +1,9 @@
 {
-  "variants":{
-    "normal": { "model": "lighting:fencetopper_bottom"}
+  "variants": {
+    "normal": { "model": "lighting:fencetopper_bottom" },
+    "facing=south":{"model":"lighting:fencetopper_bottom"},
+    "facing=west":{"model":"lighting:fencetopper_bottom","y":90},
+    "facing=north":{"model":"lighting:fencetopper_bottom","y":180},
+    "facing=east":{"model":"lighting:fencetopper_bottom","y":270}
   }
 }
